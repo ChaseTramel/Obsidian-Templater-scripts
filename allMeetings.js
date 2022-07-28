@@ -1,17 +1,18 @@
-//moment.js is already loaded into templater
+//moment.js is already loaded into templater, included here for debugging
 //const moment = require('moment');
-//set up function to calculate today and meeting dates
+
+//set up function to calculate tomorrow and meeting dates
 function allMeetings() {
     //set up standardized format
     var format = "dddd, MMMM Do YYYY";
 
     //tomorrow
     //calculate tomorrow
-    var today = "Tomorrow is " + moment().add(1, 'd').format(format) + ".  ";
+    var tomorrow = "Tomorrow is " + moment().add(1, 'd').format(format) + ".  ";
 
     //weekly meeting
     //calculate next monday
-    var weeklyMeeting = "Our next weekly meeting is " + moment().endOf('week').day("1").format(format) + ".  ";
+    var weeklyMeeting = "Our next weekly meeting is " + moment().endOf('week').day("8").format(format) + ".  ";
 
     //monthly meeting
     //calculate first wednesday of the month
@@ -26,10 +27,10 @@ function allMeetings() {
     var yearlyMeeting = "Our next yearly meeting is " + moment().endOf('year').day(7).format(format) + ".  ";
 
     //write output to console
-    console.log(today + "\n" + weeklyMeeting + "\n" + monthlyMeeting + "\n" + quarterlyMeeting + "\n" + yearlyMeeting);
+    console.log(tomorrow + "\n" + weeklyMeeting + "\n" + monthlyMeeting + "\n" + quarterlyMeeting + "\n" + yearlyMeeting);
 
     //return output
-    return today + "\n" + weeklyMeeting + "\n" + monthlyMeeting + "\n" + quarterlyMeeting + "\n" + yearlyMeeting;
+    return tomorrow + "\n" + weeklyMeeting + "\n" + monthlyMeeting + "\n" + quarterlyMeeting + "\n" + yearlyMeeting;
 }
 
 //run allMeetings function for debugging purposes
