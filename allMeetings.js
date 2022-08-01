@@ -1,5 +1,5 @@
-//moment.js is already loaded into templater, included here for debugging
-//const moment = require('moment');
+//moment.js is already loaded into Obsidian Templater, included here for debugging
+const moment = require('moment');
 
 //set up function to calculate tomorrow and meeting dates
 function allMeetings() {
@@ -12,7 +12,7 @@ function allMeetings() {
 
     //weekly meeting
     //calculate next monday
-    var weeklyMeeting = "Our next weekly meeting is " + moment().endOf('week').day("8").format(format) + ".  ";
+    var weeklyMeeting = "Our next weekly meeting is " + moment().endOf('week').day("1").format(format) + ".  ";
 
     //monthly meeting
     //calculate first wednesday of the month
