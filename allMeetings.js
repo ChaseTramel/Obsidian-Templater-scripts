@@ -1,5 +1,5 @@
 //moment.js is already loaded into Obsidian Templater, included here for debugging
-const moment = require('moment');
+//const moment = require('moment');
 
 //set up function to calculate tomorrow and meeting dates
 function allMeetings() {
